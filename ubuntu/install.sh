@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 # Auto Script For Teslamate
-sudo curl -fsSL https://get.docker.com/ | sh
+curl -fsSL https://get.docker.com/ | sh
 sudo systemctl start docker
 sudo systemctl enable docker
 sudo docker --version
