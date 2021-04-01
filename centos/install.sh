@@ -2,6 +2,7 @@
 set -e
 # Auto Script For Teslamate
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+sudo sed -i 's/$releasever/7/g' /etc/yum.repos.d/docker-ce.rep
 sudo yum install -y docker-ce
 sudo systemctl start docker
 sudo systemctl enable docker
