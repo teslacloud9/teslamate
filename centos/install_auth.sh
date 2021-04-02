@@ -12,4 +12,5 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 docker-compose --version
 curl -L "https://raw.githubusercontent.com/teslacloud9/teslamate/master/auth/docker-compose.yml" -o docker-compose.yml
+curl -L "https://raw.githubusercontent.com/teslacloud9/teslamate/master/auth/.env" -o .env
 sudo docker-compose pull
