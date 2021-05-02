@@ -1,7 +1,10 @@
 #!/bin/sh
 set -e
 # Auto Script For Teslamate
-sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+curl -L "https://raw.githubusercontent.com/teslacloud9/teslamate/master/centos/docker-ce.repo" -o docker-ce.repo
+sudo yum-config-manager --add-repo ./docker-ce.repo
+sudo yum -y install slirp4netns fuse-overlayfs container-selinux
+
 sudo sed -i 's/$releasever/7/g' /etc/yum.repos.d/docker-ce.repo
 sudo yum install -y docker-ce
 sudo systemctl start docker
